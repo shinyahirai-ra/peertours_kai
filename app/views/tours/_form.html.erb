@@ -1,0 +1,22 @@
+<%= simple_form_for @tour, wrapper: :horizontal_form, html: {class: 'form-horizontal'} do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :area_id, :collection => Area.all  %>
+    <%= f.input :recommend_one %>
+    <%= f.input :recommend_two %>
+    <%= f.input :recommend_three %>
+    <%= f.input :included, input_html: {rows: 10} %>
+    <%= f.input :number_of_people, collection: 2..15 %>
+    <%= f.input :meeting_place %>
+    <%= f.input :price %>
+    <%= f.input :time %>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-10">
+      <%= f.button :submit, class: 'btn btn-primary' %> | <%= link_to 'Back', tours_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>

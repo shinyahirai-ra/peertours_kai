@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>title:</strong>
+  <%= @tour.title %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @tour.area.name %>
+</p>
+
+<p>
+  <strong>Reccomend one:</strong>
+  <%= @tour.recommend_one %>
+</p>
+
+<p>
+  <strong>Recommend two:</strong>
+  <%= @tour.recommend_two %>
+</p>
+
+<p>
+  <strong>Reccomend three:</strong>
+  <%= @tour.recommend_three %>
+</p>
+
+<p>
+  <strong>Included:</strong>
+  <%= @tour.included %>
+</p>
+
+<p>
+  <strong>Number of people:</strong>
+  <%= @tour.number_of_people %>
+</p>
+
+<p>
+  <strong>Meeting place:</strong>
+  <%= @tour.meeting_place %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tour.price %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @tour.time %>
+</p>
+<%= link_to 'Edit', edit_tour_path(@tour) %> |
+<%= link_to 'Back', tours_path %>
